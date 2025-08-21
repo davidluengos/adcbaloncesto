@@ -5,7 +5,7 @@
 }
 
 .texto-ultimopartido-resultado{
-    -webkit-text-stroke: 1px green;
+    -webkit-text-stroke: 1px darkblue;
     font-size: 3em;
     font-weight: 900;
     color: yellow;
@@ -13,13 +13,13 @@
 }
 
 .texto-ultimopartido-equipo{
-    color:green;
+    color:darkblue;
     
 }
 
 .texto-slider{
-    -webkit-text-stroke: 5px green;
-    font-size: 4em;
+    -webkit-text-stroke: 0.5px darkblue;
+    font-size: 2.5em;
     font-weight: 900;
     color: yellow;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
@@ -28,7 +28,7 @@
 @media only screen and (max-width: 800px) {
 
     .texto-slider{
-        -webkit-text-stroke: 2px green;
+        -webkit-text-stroke: 2px darkblue;
         font-size: 6vw;
     }
  
@@ -105,3 +105,45 @@ color: #999;
 cursor: default;
 }
 
+.text-primary{
+    color: darkblue !important;
+}
+
+.bg-adc-dark {
+    background-color: darkblue !important;
+}
+
+:root {
+    --bs-primary: darkblue !important;
+    --bs-secondary: pink !important;
+    --bs-light: cyan !important;
+    --bs-dark: brown !important;
+
+    --bs-link-color: var(--bs-primary);
+    --bs-link-hover-color: #0d1570;
+}
+
+
+a {
+    color: var(--bs-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0d1570; /* o usa lighten/darken manual */
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--bs-primary), 50%);
+    border-color: darken(var(--bs-primary), 50%);
+}
+
+.bg-adc-light {
+    background-color: var(--bs-light);
+}
