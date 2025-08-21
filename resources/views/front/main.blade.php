@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CB Al-Qázeres Extremadura - {{$title}}</title>
+    <title>ADC Baloncesto - {{$title}}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    <meta content="Toda la información sobre el Club Baloncesto Al-Qázeres Extremadura que milita en Liga Femenina Challenge" name="description">
+    <meta content="Toda la información sobre el ADC Baloncesto" name="description">
 
     <!-- Favicon -->
     <link href="/img/favicon.ico" rel="icon">
@@ -54,9 +54,9 @@
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center mx-n2">
                     <span>Síguenos:</span>
-                    <a class="btn btn-link text-light" target="_blank" href="https://www.facebook.com/cbalqazeres"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" target="_blank" href="https://twitter.com/cb_alqazeres"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link text-light" target="_blank" href="https://www.instagram.com/cbalqazeres/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-link text-light" target="_blank" href="https://www.facebook.com/adcbaloncesto"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link text-light" target="_blank" href="https://twitter.com/adcbaloncesto"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-link text-light" target="_blank" href="https://www.instagram.com/adcbaloncestocaceres/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -67,16 +67,16 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="/" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="/img/logo_alqazeres.jpg" alt="" width="60px">
-            <h1 class="m-0 titulo-movil">&nbsp Alter Enersun</br>&nbspAl-Qázeres Extremadura</h1>
+            <img src="/img/logo_adc.png" alt="" width="60px">
+            <h1 class="m-0 titulo-movil">&nbsp ADC Baloncesto</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="http://cbalqazeres.es/#partidos" class="nav-item nav-link">Partidos</a>
-                <a href="http://cbalqazeres.es/#plantilla" class="nav-item nav-link">Plantilla</a>
+                <a href="/#partidos" class="nav-item nav-link">Partidos</a>
+                <a href="/#plantilla" class="nav-item nav-link">Plantilla</a>
                 <a href="/clasificacion" class="nav-item nav-link">Clasificación</a>
                 <a href="/noticias" class="nav-item nav-link">Actualidad</a>
             </div>
