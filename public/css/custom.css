@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'scoreboard';
+    src: url('/public/css/scoreboard.ttf');
+
+}
+
+.texto-ultimopartido-resultado{
+    -webkit-text-stroke: 1px green;
+    font-size: 3em;
+    font-weight: 900;
+    color: yellow;
+    
+}
+
+.texto-ultimopartido-equipo{
+    color:green;
+    
+}
+
+.texto-slider{
+    -webkit-text-stroke: 5px green;
+    font-size: 4em;
+    font-weight: 900;
+    color: yellow;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+@media only screen and (max-width: 800px) {
+
+    .texto-slider{
+        -webkit-text-stroke: 2px green;
+        font-size: 6vw;
+    }
+ 
+}
+
+@media only screen and (min-width: 600px) {
+
+    .titulo-movil{
+        font-size: 2.5vw;
+    }
+    br { display: none; }
+}
+@media only screen and (max-width: 600px) {
+
+    .titulo-movil{
+        font-size: 0.9em;
+    }
+}
+
+.bold-text{
+    font-weight: bold;
+}
+
+.patrocinadoresPrincipales{
+    width: 300px;
+    margin:auto;
+    display:block;
+}
+
+.patrocinadoresInstitucionales{
+    width: 220px;
+    margin:auto;
+    display:block;
+}
+
+.patrocinadoresNormales{
+    width: 180px;
+    margin:auto;
+    display:block;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.align-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Paginacion */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+  }
+  
+.pagination > * {
+margin: 0 5px;
+padding: 5px 10px;
+border: 1px solid #ccc;
+background-color: #fff;
+color: #333;
+}
+
+.pagination > .active > span {
+background-color: #007bff;
+color: #fff;
+}
+
+.pagination > .disabled > span {
+color: #999;
+cursor: default;
+}
+

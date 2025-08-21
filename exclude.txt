@@ -1,0 +1,17 @@
+.git
+.env
+/.gitignore
+rsync.txt
+/public/storage
+/vendor
+/public/.htaccess
+
+#subir cambios a repositorio
+# abrir ubuntu desktop
+#cd /mnt/c/xampp/htdocs/cbalqazeres
+#rsync -avz --force --progress --exclude-from=exclude.txt ./. cbalqazeres@51.178.156.7:/home/cbalqazeres/public_html/maindomain/
+#introducir usuario y contraseña de registros greetik
+
+#abrir putty cbalqazeres, con contraseña de registros greetik
+#cd public_html/maindomain
+#php artisan optimize
