@@ -43,7 +43,7 @@
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark text-light px-0 py-2">
+    <div class="container-fluid bg-adc-dark text-light px-0 py-2">
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center">
@@ -75,10 +75,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="/#partidos" class="nav-item nav-link">Partidos</a>
-                <a href="/#plantilla" class="nav-item nav-link">Plantilla</a>
-                <a href="/clasificacion" class="nav-item nav-link">Clasificación</a>
-                <a href="/noticias" class="nav-item nav-link">Actualidad</a>
+                <a href="/#partidos" class="nav-item nav-link text-primary">Partidos</a>
+                <a href="/#plantilla" class="nav-item nav-link text-primary">Plantilla</a>
+                <a href="/clasificacion" class="nav-item nav-link text-primary">Clasificación</a>
+                <a href="/noticias" class="nav-item nav-link text-primary">Actualidad</a>
             </div>
             <a href="" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Contacto<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
