@@ -20,8 +20,8 @@ class HomeController extends Controller
     {
         $proximoPartido = Partido::where('fecha', '>' , now())->orderBy('fecha')->first();
         $ultimosPartidos = Partido::where('fecha', '<' , now())->orderBy('fecha', 'desc')->take(3)->get();
-        $jugadorasPrimerEquipo = Jugadore::where('equipo_id', 3)->where('rol_id', 1)->where('activo', 1)->orderBy('numero')->get();
-        $staffPrimerEquipo = Jugadore::where('equipo_id', 3)->where('rol_id', "!=", 1)->where('activo', 1)->orderBy('id')->get();
+        $jugadorasPrimerEquipo = Jugadore::where('equipo_id', 1)->where('rol_id', 1)->where('activo', 1)->orderBy('numero')->get();
+        $staffPrimerEquipo = Jugadore::where('equipo_id', 1)->where('rol_id', "!=", 1)->where('activo', 1)->orderBy('id')->get();
         //$patrocinadoresPrincipales = Patrocinadore::where('tipo_patrocinador_id',  3)->get();
         //$patrocinadoresInstitucionales = Patrocinadore::where('tipo_patrocinador_id', 4)->get();
         //$patrocinadoresNormales = Patrocinadore::where('tipo_patrocinador_id', 5)->get();
