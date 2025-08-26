@@ -6,7 +6,7 @@
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/slider.jpg" alt="Image">
+                    <img class="w-100" src="img/slider-adc.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -202,7 +202,7 @@
 
 
     <!-- Facts Start -->
-    <div class="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/slider.jpg">
+    <div class="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/slider-adc.jpg">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
@@ -228,7 +228,7 @@
 
     <!-- Imagen retro Start -->
     <div class="">
-        <img src="img/cabecera.jpg" class="w-100" alt="Responsive image">
+        <img src="img/foto-cantera-2223.jpg" class="w-100" alt="Responsive image">
     </div>
     <!-- Imagen retro End -->
 
