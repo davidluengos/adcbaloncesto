@@ -4,7 +4,7 @@
 
 <div class="container-xxl py-5" id="plantilla">
     <div class="container">
-        @foreach ($noticias as $noticia)
+        @foreach ($items as $noticia)
 
         <!-- About Start -->
         <div class="container-xxl py-5">
@@ -24,7 +24,9 @@
                             <p class="fs-5 fw-bold text-primary">{{date('d.m.Y', strtotime($noticia->fecha))}}</p>
                             <h1 class="display-5 mb-4">{{$noticia->titulo}}</h1>
                             <p class="mb-4">{!! Str::limit($noticia->contenido, $limit = 200, $end = '...') !!}</p>
-                            <a class="btn btn-primary py-3 px-4" href="{{ route('front.noticia', $noticia->slug) }}">Leer más</a>
+                            @if ($noticia->slug)
+                                <a class="btn btn-primary py-3 px-4" href="{{ route('front.noticia', $noticia->slug) }}">Leer más</a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -38,6 +40,6 @@
 </div>
 
 <div class="d-flex justify-content-center py-4">
-    {{$noticias->links('front.pagination')}}
+    {{$items->links('front.pagination')}}
 </div>
 @endsection
