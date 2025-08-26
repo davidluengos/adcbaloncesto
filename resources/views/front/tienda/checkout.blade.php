@@ -1,8 +1,6 @@
 @extends('front.main')
 
 @section('content')
-
-
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="row justify-content-center">
             <div class="col-lg-10">
@@ -46,7 +44,7 @@
 
                                 <div class="mb-3">
                                     <label class="form-label">Comentarios</label>
-                                    <textarea name="comentarios" class="form-control" rows="3" ></textarea>
+                                    <textarea name="comentarios" class="form-control" rows="3"></textarea>
                                 </div>
 
                                 <button type="submit" class="btn btn-primary w-100">📧 Solicitar pedido</button>
@@ -55,5 +53,6 @@
                     </div>
                 </div>
             </div>
-            <!-- 404 End -->
-        @endsection
+        </div>
+    </div>
+@endsection
