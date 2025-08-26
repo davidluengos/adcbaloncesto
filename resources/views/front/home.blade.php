@@ -235,7 +235,7 @@
     <!-- Projects Start -->
     <div class="container-xxl py-5" id="plantilla">
         <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="text-center mx-auto wow" style="max-width: 500px;">
                 <p class="fs-5 fw-bold text-primary">Plantilla</p>
                 @if ($jugadorasPrimerEquipo->count() == 0)
                     <h2>No hay plantilla disponible</h2>
@@ -246,7 +246,7 @@
 
             <div class="row g-4 portfolio-container">
                 @foreach ($jugadorasPrimerEquipo as $jugadora)
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow ">
+                    <div class="col-lg-3 col-md-6 portfolio-item second wow ">
                         <div class="portfolio-inner rounded">
                             <img class="img-fluid" src="{{ $jugadora->imagen }}" alt="">
                             <div class="portfolio-text">
@@ -263,7 +263,7 @@
                 @endforeach
 
                 @foreach ($staffPrimerEquipo as $staff)
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow ">
+                    <div class="col-lg-3 col-md-6 portfolio-item second wow ">
                         <div class="portfolio-inner rounded">
                             <img class="img-fluid" src="{{ $staff->imagen }}" alt="">
                             <div class="portfolio-text">
