@@ -8,10 +8,10 @@ rsync.txt
 
 #subir cambios a repositorio
 # abrir ubuntu desktop
-#cd /mnt/c/xampp/htdocs/cbalqazeres
-#rsync -avz --force --progress --exclude-from=exclude.txt ./. cbalqazeres@51.178.156.7:/home/cbalqazeres/public_html/maindomain/
+#cd /mnt/c/xampp/htdocs/adcbaloncesto
+#rsync -avz --force --progress --exclude-from=exclude.txt ./. adcbasket@5.135.232.246:/home/adcbasket/public_html/new/
 #introducir usuario y contraseña de registros greetik
 
-#abrir putty cbalqazeres, con contraseña de registros greetik
-#cd public_html/maindomain
+#abrir putty adcbasket, con contraseña de registros greetik
+#cd public_html/maindomain o el subdominio que corresponda
 #php artisan optimize
