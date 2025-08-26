@@ -77,10 +77,11 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="/#partidos" class="nav-item nav-link text-primary">Partidos</a>
                 <a href="/#plantilla" class="nav-item nav-link text-primary">Plantilla</a>
-                <a href="/clasificacion" class="nav-item nav-link text-primary">Clasificación</a>
+                {{-- <a href="/clasificacion" class="nav-item nav-link text-primary">Clasificación</a> --}}
+                <a href="/tienda" class="nav-item nav-link text-primary">Tienda</a>
                 <a href="/noticias" class="nav-item nav-link text-primary">Actualidad</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Contacto<i class="fa fa-arrow-right ms-3"></i></a>
+            {{-- <a href="" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Contacto<i class="fa fa-arrow-right ms-3"></i></a> --}}
         </div>
     </nav>
     <!-- Navbar End -->
