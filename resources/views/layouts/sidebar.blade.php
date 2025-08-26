@@ -23,6 +23,18 @@
             <i class="fas fa-fw fa-trophy "></i>
             <span>Partidos</span>
         </a>
+        <a class="nav-link" href="{{ route('productos.index') }}">
+            <i class="fas fa-fw fa-box "></i>
+            <span>Productos</span>
+        </a>
+        <a class="nav-link" href="{{ route('noticias.index') }}">
+            <i class="fas fa-fw fa-newspaper "></i>
+            <span>Noticias</span>
+        </a>
+        <a class="nav-link" href="{{ route('patrocinadores.index') }}">
+            <i class="fas fa-fw fa-handshake "></i>
+            <span>Patrocinadores</span>
+        </a>
         <a class="nav-link" href="{{ route('equipos.index') }}">
             <i class="fas fa-fw fa-cubes "></i>
             <span>Equipos</span>
@@ -34,14 +46,6 @@
         <a class="nav-link" href="{{ route('temporada.index') }}">
             <i class="fas fa-fw fa-calendar "></i>
             <span>Temporadas</span>
-        </a>
-        <a class="nav-link" href="{{ route('patrocinadores.index') }}">
-            <i class="fas fa-fw fa-handshake "></i>
-            <span>Patrocinadores</span>
-        </a>
-        <a class="nav-link" href="{{ route('noticias.index') }}">
-            <i class="fas fa-fw fa-newspaper "></i>
-            <span>Noticias</span>
         </a>
         <a class="nav-link" href="{{ route('posiciones.index') }}">
             <i class="fas fa-fw fa-compress "></i>
