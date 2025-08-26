@@ -6,6 +6,7 @@ use App\Http\Controllers\Front\ClasificacionController;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\NoticiaController;
 use App\Http\Controllers\Front\NoticiasController;
+use App\Http\Controllers\Front\TiendaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -35,3 +36,13 @@ Route::get('/clasificacion', ClasificacionController::class)->name('front.clasif
 Route::get('/noticias', NoticiasController::class)->name('front.noticias');
 Route::get('/noticias/{slug}', NoticiaController::class)->name('front.noticia');
 
+Route::get('/tienda', [TiendaController::class, 'index'])->name('tienda.index');
+Route::get('/tienda/{id}', [TiendaController::class, 'show'])->name('tienda.show');
+
+Route::post('/tienda/{id}/add-to-cart', [TiendaController::class, 'addToCart'])->name('tienda.addToCart');
+
+Route::get('/carrito', [TiendaController::class, 'cart'])->name('tienda.cart');
+Route::get('/checkout', [TiendaController::class, 'checkout'])->name('tienda.checkout');
+Route::post('/checkout', [TiendaController::class, 'processOrder'])->name('tienda.processOrder');
+Route::delete('/carrito/{id}', [TiendaController::class, 'removeFromCart'])->name('tienda.removeFromCart');
+Route::delete('/carrito', [TiendaController::class, 'clearCart'])->name('tienda.clearCart');

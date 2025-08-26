@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\PartidoController;
 use App\Http\Controllers\Admin\PatrocinadoreController;
 use App\Http\Controllers\Admin\PatrocinadorTipoController;
 use App\Http\Controllers\Admin\PosicioneController;
+use App\Http\Controllers\Admin\ProductoController;
 use App\Http\Controllers\Admin\RoleController;
 use Illuminate\Support\Facades\Route;
 
@@ -131,3 +132,12 @@ Route::get('/temporadas/{temporada}/ver', [App\Http\Controllers\TemporadaControl
 Route::get('/temporadas/{temporada}/editar', [App\Http\Controllers\TemporadaController::class, 'edit'])->middleware('auth')->name('temporada.edit');
 Route::put('/temporadas/{temporada}/actualizar', [App\Http\Controllers\TemporadaController::class, 'update'])->middleware('auth')->name('temporada.update');
 Route::delete('/temporadas/{temporada}/delete', [App\Http\Controllers\TemporadaController::class, 'destroy'])->middleware('auth')->name('temporada.destroy');
+
+//Productos
+Route::get('/productos', [ProductoController::class, 'index'])->middleware('auth')->name('productos.index');
+Route::get('/productos/crear', [ProductoController::class, 'create'])->middleware('auth')->name('productos.create');
+Route::post('/productos/almacenar', [ProductoController::class, 'store'])->middleware('auth')->name('productos.store');
+Route::get('/productos/{producto}/ver', [ProductoController::class, 'show'])->middleware('auth')->name('productos.show');
+Route::get('/productos/{producto}/editar', [ProductoController::class, 'edit'])->middleware('auth')->name('productos.edit');
+Route::put('/productos/{producto}/actualizar', [ProductoController::class, 'update'])->middleware('auth')->name('productos.update');
+Route::delete('/productos/{producto}/delete', [ProductoController::class, 'destroy'])->middleware('auth')->name('productos.destroy');
