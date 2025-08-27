@@ -10,6 +10,7 @@ Se ha realizado un nuevo pedido con los siguientes datos:
 @if(!empty($cliente['comentarios']))
 **Comentarios:** {{ $cliente['comentarios'] }}  
 @endif
+**Socio:** {{ $cliente['socio'] ? 'Sí' : 'No' }}
 
 ## Productos
 

@@ -75,6 +75,7 @@ class TiendaController extends Controller
             'email' => 'required|email',
             'telefono' => 'required|string|max:20',
             'comentarios' => 'nullable|string|max:500',
+            'socio' => 'required|boolean',
         ]);
 
         $cart = Session::get('cart', []);
