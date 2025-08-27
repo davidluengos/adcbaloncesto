@@ -204,7 +204,7 @@
     <!-- Facts Start -->
     <div class="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/slider-adc.jpg">
         <div class="container py-5">
-            <div class="row g-5">
+            {{-- <div class="row g-5">
                 <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
                     <h4 class="display-4 text-white" data-toggle="counter-up">1234</h4>
                     <span class="fs-5 fw-semi-bold text-light">CB Al-Qázeres</span>
@@ -221,7 +221,7 @@
                     <h4 class="display-4 text-white" data-toggle="counter-up">1333</h4>
                     <span class="fs-5 fw-semi-bold text-light">CB Al-Qázeres</span>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
     <!-- Facts End -->
