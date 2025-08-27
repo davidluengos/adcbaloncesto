@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ADC Baloncesto - {{$title}}</title>
+    <title>ADC Baloncesto - {{ $title }}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="Toda la información sobre el ADC Baloncesto" name="description">
@@ -14,7 +14,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -36,7 +38,8 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
     <!-- Spinner End -->
@@ -54,9 +57,12 @@
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center mx-n2">
                     <span>Síguenos:</span>
-                    <a class="btn btn-link text-light" target="_blank" href="https://www.facebook.com/adcbaloncesto"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" target="_blank" href="https://twitter.com/adcbaloncesto"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link text-light" target="_blank" href="https://www.instagram.com/adcbaloncestocaceres/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-link text-light" target="_blank" href="https://www.facebook.com/adcbaloncesto"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link text-light" target="_blank" href="https://twitter.com/adcbaloncesto"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-link text-light" target="_blank"
+                        href="https://www.instagram.com/adcbaloncestocaceres/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -91,7 +97,7 @@
         <!-- Page Header Start -->
         <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container text-center py-5">
-                <h1 class="display-3 text-white mb-4 animated slideInDown">{{$title}}</h1>
+                <h1 class="display-3 text-white mb-4 animated slideInDown">{{ $title }}</h1>
             </div>
         </div>
         <!-- Page Header End -->
@@ -102,9 +108,9 @@
 
     @inject('patrocinadores', 'App\Models\Patrocinadore')
     @php
-    $patrocinadoresPrincipales = $patrocinadores->patrocinadoresPrincipales();
-    $patrocinadoresInstitucionales = $patrocinadores->patrocinadoresInstitucionales();
-    $patrocinadoresNormales = $patrocinadores->patrocinadoresNormales();
+        $patrocinadoresPrincipales = $patrocinadores->patrocinadoresPrincipales();
+        $patrocinadoresInstitucionales = $patrocinadores->patrocinadoresInstitucionales();
+        $patrocinadoresNormales = $patrocinadores->patrocinadoresNormales();
     @endphp
 
     <!-- Patrocinadores Start -->
@@ -115,19 +121,22 @@
         </div>
         <div class="row">
             @foreach ($patrocinadoresPrincipales as $patrocinador)
-            <img class="patrocinadoresPrincipales" data-wow-delay="0.1s" src="{{$patrocinador->imagen}}" alt="{{$patrocinador->nombre}}">
+                <img class="patrocinadoresPrincipales" data-wow-delay="0.1s" src="{{ $patrocinador->imagen }}"
+                    alt="{{ $patrocinador->nombre }}">
             @endforeach
         </div>
         <hr>
         <div class="row">
             @foreach ($patrocinadoresInstitucionales as $patrocinador)
-            <img class="patrocinadoresInstitucionales" data-wow-delay="0.1s" src="{{$patrocinador->imagen}}" alt="{{$patrocinador->nombre}}">
+                <img class="patrocinadoresInstitucionales" data-wow-delay="0.1s" src="{{ $patrocinador->imagen }}"
+                    alt="{{ $patrocinador->nombre }}">
             @endforeach
         </div>
         <hr>
         <div class="row">
             @foreach ($patrocinadoresNormales as $patrocinador)
-            <img class="patrocinadoresNormales" data-wow-delay="0.1s" src="{{$patrocinador->imagen}}" alt="{{$patrocinador->nombre}}">
+                <img class="patrocinadoresNormales" data-wow-delay="0.1s" src="{{ $patrocinador->imagen }}"
+                    alt="{{ $patrocinador->nombre }}">
             @endforeach
         </div>
     </div>
@@ -142,9 +151,12 @@
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Cáceres</p>
                     {{-- <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@cbalqazeres.es</p> --}}
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank" href="https://www.facebook.com/cbalqazeres"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank" href="https://twitter.com/cb_alqazeres"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank" href="https://www.instagram.com/cbalqazeres/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank"
+                            href="https://www.facebook.com/cbalqazeres"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank"
+                            href="https://twitter.com/cb_alqazeres"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank"
+                            href="https://www.instagram.com/cbalqazeres/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -160,7 +172,7 @@
                     <a class="btn btn-link" href="">Cookies</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                        <!-- <div class="row">
+                    <!-- <div class="row">
                             <div class="col-4">
                                 <img class="w-75" data-wow-delay="0.1s"  src="/storage/img/lfc.jpg" alt="">
                             </div>
@@ -202,7 +214,8 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top border-button"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top border-button"><i
+            class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -219,6 +232,41 @@
 
     <!-- Template Javascript -->
     <script src="/js/main.js"></script>
+
+    {{-- Banner de cookies – ADC Baloncesto (solo estadísticas) --}}
+    @if (!request()->cookie('cookies_stats_accepted'))
+        <div id="cookie-banner" class="alert alert-warning text-center fixed-bottom m-0 p-3" style="z-index: 1050;">
+            En <strong>ADC Baloncesto</strong> utilizamos cookies de estadísticas para conocer de forma anónima cómo se
+            usa la web y mejorar la experiencia.
+            <button id="accept-cookies" class="btn btn-sm btn-primary ms-2">Aceptar</button>
+            <button id="reject-cookies" class="btn btn-sm btn-secondary ms-2">Rechazar</button>
+            <a href="{{ url('/politica-cookies') }}" class="btn btn-sm btn-link ms-2">Más información</a>
+        </div>
+
+        <script>
+            document.getElementById('accept-cookies').addEventListener('click', function() {
+                // Oculta el banner
+                document.getElementById('cookie-banner').style.display = 'none';
+
+                // Crea la cookie de aceptación de estadísticas (30 días)
+                const d = new Date();
+                d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 días
+                document.cookie = "cookies_stats_accepted=1; expires=" + d.toUTCString() + "; path=/";
+            });
+        </script>
+        <script>
+            document.getElementById('reject-cookies').addEventListener('click', function() {
+                // Oculta el banner
+                document.getElementById('cookie-banner').style.display = 'none';
+
+                // Crea una cookie de rechazo de 30 días para no volver a mostrar el banner
+                const d = new Date();
+                d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 días
+                document.cookie = "cookies_stats_declined=1; expires=" + d.toUTCString() + "; path=/";
+            });
+        </script>
+    @endif
+
 </body>
 
 </html>
