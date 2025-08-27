@@ -40,8 +40,7 @@
 										<th>Titulo</th>
 										<th>Contenido</th>
 										<th>Imagen</th>
-
-                                        <th></th>
+                                        <th>Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -52,8 +51,11 @@
 											<td>{{ $noticia->fecha }}</td>
 											<td>{{ $noticia->titulo }}</td>
 											<td>{{ Str::limit($noticia->contenido, $limit = 200, $end = '...') }}</td>
-											<td>{{ $noticia->imagen }}</td>
-
+                                            <td>
+                                                @if ($noticia->imagen)
+                                                    <img src="{{ asset($noticia->imagen) }}" width="50">
+                                                @endif
+                                            </td>
                                             <td>
                                                 <form action="{{ route('noticias.destroy',$noticia->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('noticias.show',$noticia->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
