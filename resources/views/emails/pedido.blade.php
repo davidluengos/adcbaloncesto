@@ -19,7 +19,7 @@ Se ha realizado un nuevo pedido con los siguientes datos:
 @foreach($cart as $item)
 | {{ $item['nombre'] }} | {{ $item['cantidad'] }} | {{ $item['talla'] ?? '-' }} | {{ number_format($item['precio'],2) }} € | {{ number_format($item['precio'] * $item['cantidad'],2) }} € |
 @endforeach
-| **Total** | - | - | **{{ number_format($total,2) }} €** | **{{ number_format($total,2) }} €** |
+| **Total** | - | - | - | **{{ number_format($total,2) }} €** |
 @endcomponent
 
 Gracias por tu pedido. Nos pondremos en contacto contigo próximamente.
