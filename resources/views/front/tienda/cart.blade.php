@@ -26,7 +26,8 @@
                         <th>Producto</th>
                         <th>Cantidad</th>
                         <th>Talla</th>
-                        <th>Precio</th>
+                        <th>Precio Unitario</th>
+                        <th>Subtotal</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -38,6 +39,7 @@
                             <td>{{ $item['cantidad'] }}</td>
                             <td>{{ $item['talla'] ?? '-' }}</td>
                             <td>{{ number_format($item['precio'], 2) }} €</td>
+                            <td>{{ number_format($item['precio'] * $item['cantidad'], 2) }} €</td>
                             <td>
                                 <form action="{{ route('tienda.removeFromCart', $id) }}" method="POST" onsubmit="return confirm('¿Eliminar este producto del carrito?')">
                                     @csrf
@@ -51,7 +53,7 @@
                 </tbody>
                 <tfoot>
                     <tr class="table-primary">
-                        <td colspan="3" class="text-end"><strong>Total</strong></td>
+                        <td colspan="4" class="text-end"><strong>Total</strong></td>
                         <td><strong>{{ number_format($total, 2) }} €</strong></td>
                         <td></td>
                     </tr>
@@ -63,7 +65,7 @@
         <form action="{{ route('tienda.clearCart') }}" method="POST" class="d-inline" onsubmit="return confirm('¿Seguro que quieres vaciar todo el carrito?')">
     @csrf
     @method('DELETE')
-    <button type="submit" class="btn btn-warning mt-3">🗑️ Vaciar carrito</button>
+    <button type="submit" class="btn btn-secondary mt-3">🗑️ Vaciar carrito</button>
     <a href="{{ route('tienda.index') }}" class="btn btn-primary mt-3">⬅️ Seguir comprando</a>
 </form>
     @endif

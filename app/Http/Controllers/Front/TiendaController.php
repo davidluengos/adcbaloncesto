@@ -36,13 +36,14 @@ class TiendaController extends Controller
         $cart = Session::get('cart', []);
 
         $talla = $request->input('talla', null);
+        $cantidad = $request->input('cantidad', 1);
 
         $cart[] = [
             'id' => $producto->id,
             'nombre' => $producto->nombre,
             'precio' => $producto->precio,
-            'cantidad' => 1,
             'talla' => $talla,
+            'cantidad' => $cantidad,
         ];
 
         Session::put('cart', $cart);

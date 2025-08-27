@@ -64,6 +64,16 @@
                     <a class="btn btn-link text-light" target="_blank"
                         href="https://www.instagram.com/adcbaloncestocaceres/"><i class="fab fa-instagram"></i></a>
                 </div>
+
+                {{-- Si la sesión tiene productos en el carrito ponemos un botón con fondo light --}}
+                @if (session('cart'))
+                    <div class="h-100 d-inline-flex align-items-center mx-n2" style="padding-left: 20px;">
+                        <a class="btn btn-light" href="{{ route('tienda.cart') }}">
+                            <i class="fas fa-shopping-cart"></i>
+                            {{ count(session('cart')) }} productos
+                        </a>
+                    </div>
+                @endif
             </div>
         </div>
     </div>

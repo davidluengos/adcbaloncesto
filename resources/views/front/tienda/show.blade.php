@@ -27,22 +27,25 @@
                                     <label for="talla" class="form-label">Talla:</label>
                                     <select name="talla" class="form-select" required>
                                         <option value="">-- Selecciona talla --</option>
+                                        <option>XS</option>
                                         <option>S</option>
                                         <option>M</option>
                                         <option>L</option>
                                         <option>XL</option>
+                                        <option>XXL</option>
+                                        <option>Otra (añadir en comentarios)</option>
                                     </select>
                                 </div>
                             @endif
-                            {{-- input de comentarios --}}
+                            {{-- input de cantidad --}}
                             <div class="mb-3">
-                                <label for="comentarios" class="form-label">Comentarios:</label>
-                                <textarea name="comentarios" class="form-control" rows="3"></textarea>
+                                <label for="cantidad" class="form-label">Cantidad:</label>
+                                <input type="number" name="cantidad" class="form-control" value="1" min="1" required>
                             </div>
                             <button type="submit" class="btn btn-success">🛒 Añadir al carrito</button>
                         </form>
 
-                        <a href="{{ route('tienda.index') }}" class="btn btn-link mt-3">⬅️ Volver a la tienda</a>
+                        <a href="{{ route('tienda.index') }}" class="btn btn-primary mt-3">⬅️ Volver a la tienda</a>
                     </div>
                 </div>
             </div>

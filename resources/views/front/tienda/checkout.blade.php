@@ -8,6 +8,10 @@
                     <div class="container my-4">
                         <h1>✅ Finalizar pedido</h1>
 
+                        <p>Por favor, revisa los detalles de tu pedido antes de finalizar la compra.</p>
+
+                        <p>Una vez enviado el formulario, nos pondremos en contacto contigo para confirmar el pedido y los detalles de pago.</p>
+
                         <div class="card shadow-sm p-4 mt-4">
                             <h4>Resumen del carrito</h4>
                             <ul class="list-group mb-3">
@@ -47,7 +51,7 @@
                                     <textarea name="comentarios" class="form-control" rows="3"></textarea>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary w-100">📧 Solicitar pedido</button>
+                                <button type="submit" class="btn btn-primary w-100">Solicitar pedido</button>
                             </form>
                         </div>
                     </div>
