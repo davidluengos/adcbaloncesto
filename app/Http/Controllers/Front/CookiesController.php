@@ -15,6 +15,7 @@ class CookiesController extends Controller
      */
     public function __invoke(Request $request)
     {
-        //
+        $title = 'Política de cookies';
+        return view('front.cookies', compact('title'));
     }
 }
