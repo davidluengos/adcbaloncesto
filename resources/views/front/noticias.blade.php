@@ -15,7 +15,7 @@
                             @if ($noticia->imagen)
                                 <img class="img-fluid rounded" data-wow-delay="0.1s" src="{{$noticia->imagen}}">
                             @else
-                                <img class="img-fluid rounded" data-wow-delay="0.1s" src="/img/logo_alqazeres.jpg">
+                                <img class="img-fluid rounded" data-wow-delay="0.1s" src="/img/logo_adc.png">
                             @endif
                             </div>
                     </div>
