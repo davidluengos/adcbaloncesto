@@ -149,9 +149,10 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Secciones</h4>
-                    <a class="btn btn-link" href="http://cbalqazeres.es/#partidos">Partidos</a>
-                    <a class="btn btn-link" href="/clasificacion">Clasificación</a>
-                    <a class="btn btn-link" href="http://cbalqazeres.es/#plantilla">Plantilla </a>
+                    <a class="btn btn-link" href="/#partidos">Partidos</a>
+                    <a class="btn btn-link" href="/#plantilla">Plantilla </a>
+                    <a class="btn btn-link" href="/noticias">Noticias</a>
+                    <a class="btn btn-link" href="/tienda">Tienda</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Enlaces</h4>
@@ -201,7 +202,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top border-button"><i class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
