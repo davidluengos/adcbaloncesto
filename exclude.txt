@@ -9,7 +9,7 @@ rsync.txt
 #subir cambios a repositorio
 # abrir ubuntu desktop
 #cd /mnt/c/xampp/htdocs/adcbaloncesto
-#rsync -avz --force --progress --exclude-from=exclude.txt ./. adcbasket@5.135.232.246:/home/adcbasket/public_html/new/
+#rsync -avz --force --progress --exclude-from=exclude.txt ./. adcbasket@5.135.232.246:/home/adcbasket/public_html/maindomain/
 #introducir usuario y contraseña de registros greetik
 
 #abrir putty adcbasket, con contraseña de registros greetik
