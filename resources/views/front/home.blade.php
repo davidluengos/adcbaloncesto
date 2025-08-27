@@ -44,9 +44,9 @@
                                 <i class="fa fa-pen text-primary"></i>
                             </div>
                             <div class="ps-3">
-                                <a href="/docs/ALTA_ABONADOS_ 22-23.pdf">
-                                    <h4>Hazte Socio</h4>
-                                    <span>Anima al equipo en Liga Femenina Challenge.</span>
+                                <a href="/tienda">
+                                    <h4>Hazte Socio Simpatizante</h4>
+                                    <span>Mejoramos cada día gracias a vuestro apoyo.</span>
                                 </a>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                             </div>
                             <div class="ps-3">
                                 <a href="http://cbalqazeres.es">
-                                    <h4>Al-Qázeres</h4>
+                                    <h4>CB Al-Qázeres</h4>
                                     <span>Visita la web del CB Al-Qázeres. ¡Juntos somos mejores!</span>
                                 </a>
                             </div>
