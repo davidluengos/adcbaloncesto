@@ -3,7 +3,6 @@
 @section('content')
     
 
-    <!-- 404 Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
@@ -18,7 +17,7 @@
                         Si por el motivo que fuere no está de acuerdo con estas condiciones no continúe usando esta web.</p>
                     <p class="mb-4">Cualquier tipo de notificación y/o reclamación solamente será válida por notificación escrita y/o correo certificado.</p>
                     <h2>RESPONSABILIDADES</h2>
-                    <p>Club Baloncesto Al-Qázeres no se hace responsable de la información y contenidos almacenados en foros, redes sociales o cualesquier otro medio que permita a terceros publicar contenidos de forma independiente en la página web del prestador.</p>
+                    <p>ADC Baloncesto no se hace responsable de la información y contenidos almacenados en foros, redes sociales o cualesquier otro medio que permita a terceros publicar contenidos de forma independiente en la página web del prestador.</p>
                     <p>Tampoco dicho Club se responsabilizará de los daños y perjuicios que se produzcan por fallos o malas configuraciones del software instalado en el ordenador del internauta. Se excluye toda responsabilidad por alguna incidencia técnica o fallo que se produzca cuando el usuario se conecte a internet. Igualmente no se garantiza la inexistencia de interrupciones o errores en el acceso al sitio web.</p>
                     <p>Así mismo, Club Baloncesto Al-Qázeres se reserva el derecho a actualizar, modificar o eliminar la información contenida en su página web, así como la configuración o presentación del mismo, en cualquier momento sin asumir alguna responsabilidad por ello.</p>
                     <h2>PROPIEDAD INTELECTUAL E INDUSTRIAL</h2>
@@ -32,6 +31,5 @@
             </div>
         </div>
     </div>
-    <!-- 404 End -->
 
 @endsection
