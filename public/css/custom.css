@@ -167,3 +167,7 @@ a:hover {
     background: var(--bs-primary) !important;
     color: #fff;
 }
+
+.border-button{
+    border: 1px solid #fff;
+}
