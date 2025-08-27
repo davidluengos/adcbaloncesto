@@ -147,16 +147,16 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">CB Al-Qázeres</h4>
+                    <h4 class="text-white mb-4">ADC Baloncesto</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Cáceres</p>
                     {{-- <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@cbalqazeres.es</p> --}}
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank"
-                            href="https://www.facebook.com/cbalqazeres"><i class="fab fa-facebook-f"></i></a>
+                            href="https://www.facebook.com/adcbaloncesto"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank"
-                            href="https://twitter.com/cb_alqazeres"><i class="fab fa-twitter"></i></a>
+                            href="https://twitter.com/adcbaloncesto"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank"
-                            href="https://www.instagram.com/cbalqazeres/"><i class="fab fa-instagram"></i></a>
+                            href="https://www.instagram.com/adcbaloncestocaceres/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -169,7 +169,7 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Enlaces</h4>
                     <a class="btn btn-link" href="/aviso-legal">Aviso Legal</a>
-                    <a class="btn btn-link" href="">Cookies</a>
+                    <a class="btn btn-link" href="/politica-cookies">Política de Cookies</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <!-- <div class="row">
@@ -201,7 +201,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; CB Al-Qázeres
+                    &copy; ADC Baloncesto. Todos los derechos reservados.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
@@ -233,39 +233,7 @@
     <!-- Template Javascript -->
     <script src="/js/main.js"></script>
 
-    {{-- Banner de cookies – ADC Baloncesto (solo estadísticas) --}}
-    @if (!request()->cookie('cookies_stats_accepted'))
-        <div id="cookie-banner" class="alert alert-warning text-center fixed-bottom m-0 p-3" style="z-index: 1050;">
-            En <strong>ADC Baloncesto</strong> utilizamos cookies de estadísticas para conocer de forma anónima cómo se
-            usa la web y mejorar la experiencia.
-            <button id="accept-cookies" class="btn btn-sm btn-primary ms-2">Aceptar</button>
-            <button id="reject-cookies" class="btn btn-sm btn-secondary ms-2">Rechazar</button>
-            <a href="{{ url('/politica-cookies') }}" class="btn btn-sm btn-link ms-2">Más información</a>
-        </div>
-
-        <script>
-            document.getElementById('accept-cookies').addEventListener('click', function() {
-                // Oculta el banner
-                document.getElementById('cookie-banner').style.display = 'none';
-
-                // Crea la cookie de aceptación de estadísticas (30 días)
-                const d = new Date();
-                d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 días
-                document.cookie = "cookies_stats_accepted=1; expires=" + d.toUTCString() + "; path=/";
-            });
-        </script>
-        <script>
-            document.getElementById('reject-cookies').addEventListener('click', function() {
-                // Oculta el banner
-                document.getElementById('cookie-banner').style.display = 'none';
-
-                // Crea una cookie de rechazo de 30 días para no volver a mostrar el banner
-                const d = new Date();
-                d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 días
-                document.cookie = "cookies_stats_declined=1; expires=" + d.toUTCString() + "; path=/";
-            });
-        </script>
-    @endif
+    @include('front.cookie-banner')
 
 </body>
 
