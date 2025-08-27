@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\NoticiaController;
 use App\Http\Controllers\Admin\PartidoController;
 use App\Http\Controllers\Admin\PatrocinadoreController;
 use App\Http\Controllers\Admin\PatrocinadorTipoController;
+use App\Http\Controllers\Admin\PedidoController;
 use App\Http\Controllers\Admin\PosicioneController;
 use App\Http\Controllers\Admin\ProductoController;
 use App\Http\Controllers\Admin\RoleController;
@@ -141,3 +142,6 @@ Route::get('/productos/{producto}/ver', [ProductoController::class, 'show'])->mi
 Route::get('/productos/{producto}/editar', [ProductoController::class, 'edit'])->middleware('auth')->name('productos.edit');
 Route::put('/productos/{producto}/actualizar', [ProductoController::class, 'update'])->middleware('auth')->name('productos.update');
 Route::delete('/productos/{producto}/delete', [ProductoController::class, 'destroy'])->middleware('auth')->name('productos.destroy');
+
+//Pedidos
+Route::get('/pedidos', [PedidoController::class, 'index'])->middleware('auth')->name('pedidos.index');

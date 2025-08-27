@@ -67,6 +67,10 @@
             <i class="fas fa-fw fa-briefcase "></i>
             <span>Tipos de Patrocinadores</span>
         </a>
+        <a class="nav-link" href="{{ route('pedidos.index') }}">
+            <i class="fas fa-fw fa-shopping-cart "></i>
+            <span>Pedidos</span>
+        </a>
     </li>
 
 

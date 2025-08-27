@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Mail\PedidoMail;
+use App\Models\Pedido;
+use App\Models\PedidoProducto;
 use App\Models\Producto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -80,6 +82,9 @@ class TiendaController extends Controller
 
         $cart = Session::get('cart', []);
 
+        // Guardar en BD
+        $pedido = $this->guardarPedido($data, $cart);
+
         // Enviar correo al administrador
         Mail::to('pedidos@adcbaloncesto.es')->send(new PedidoMail($data, $cart));
 
@@ -108,5 +113,35 @@ class TiendaController extends Controller
     {
         session()->forget('cart');
         return redirect()->route('tienda.cart')->with('success', 'Carrito vaciado correctamente.');
+    }
+
+    /**
+     * Guardar pedido y sus productos en la BD
+     */
+    private function guardarPedido(array $data, array $cart)
+    {
+        $total = collect($cart)->sum(fn($item) => $item['precio'] * $item['cantidad']);
+
+        $pedido = Pedido::create([
+            'nombre'      => $data['nombre'],
+            'email'       => $data['email'],
+            'telefono'    => $data['telefono'],
+            'comentarios' => $data['comentarios'] ?? '',
+            'socio'       => $data['socio'] ?? false,
+            'total'       => $total,
+        ]);
+
+        foreach ($cart as $item) {
+            PedidoProducto::create([
+                'pedido_id' => $pedido->id,
+                'producto_id' => $item['id'],
+                'nombre'    => $item['nombre'],
+                'talla'     => $item['talla'] ?? null,
+                'cantidad'  => $item['cantidad'],
+                'precio'    => $item['precio'],
+            ]);
+        }
+
+        return $pedido;
     }
 }

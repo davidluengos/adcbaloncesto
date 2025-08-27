@@ -19,13 +19,13 @@ class Producto extends Model
         'tiene_tallas' => 'boolean',
     ];
 
-    public function tallas()
-    {
-        return $this->hasMany(Talla::class);
-    }
-
     public function sePuedeComprar()
     {
         return $this->disponible && !$this->agotado;
+    }
+
+    public function pedidos()
+    {
+        return $this->hasMany(PedidoProducto::class);
     }
 }
