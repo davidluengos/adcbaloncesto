@@ -47,7 +47,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label">¿Quieres ser socio? Recuerda que ser socio te permite acceder a descuentos exclusivos.</label>
+                                    <label class="form-label">¿Quieres ser socio simpatizante? Recuerda que ser socio simpatizante te permite acceder a descuentos exclusivos.</label>
                                     <select name="socio" class="form-select">
                                         <option value="0">No</option>
                                         <option value="1">Sí</option>
