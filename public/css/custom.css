@@ -121,6 +121,7 @@ cursor: default;
 
     --bs-link-color: var(--bs-primary);
     --bs-link-hover-color: #0d1570;
+    --bs-primary-rgb: 25, 63, 103; /* valores R,G,B del color #193f67 */
 }
 
 
@@ -183,4 +184,47 @@ a:hover {
 
 .ck-editor__editable_inline {
     min-height: 150px;
+}
+
+.dorsal-circle {
+    background-color: #193f67;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(0.98);
+}
+
+.card-body {
+    transition: background-color 0.3s ease;
+}
+
+.card:hover .card-body {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dorsal-circle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.3);
 }

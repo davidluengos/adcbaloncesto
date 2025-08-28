@@ -21,13 +21,13 @@
 
             </div>
             <!-- <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button> -->
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button> -->
         </div>
     </div>
     <!-- Carousel End -->
@@ -232,10 +232,10 @@
     </div>
     <!-- Imagen retro End -->
 
-    <!-- Projects Start -->
+    <!-- Plantilla Start -->
     <div class="container-xxl py-5" id="plantilla">
         <div class="container">
-            <div class="text-center mx-auto wow" style="max-width: 500px;">
+            <div class="text-center mx-auto" style="max-width: 500px;">
                 <p class="fs-5 fw-bold text-primary">Plantilla</p>
                 @if ($jugadorasPrimerEquipo->count() == 0)
                     <h2>No hay plantilla disponible</h2>
@@ -245,44 +245,46 @@
                 @endif
             </div>
 
-            <div class="row g-4 portfolio-container">
+            <div class="row g-4">
+                {{-- Jugadoras --}}
                 @foreach ($jugadorasPrimerEquipo as $jugadora)
-                    <div class="col-lg-3 col-md-6 portfolio-item second wow ">
-                        <div class="portfolio-inner rounded">
-                            <img class="img-fluid" src="{{ $jugadora->imagen }}" alt="">
-                            <div class="portfolio-text">
-                                <h4 class="text-white mb-4">{{ $jugadora->nombre }}</h4>
-                                <div class="d-flex">
-                                    <a class="btn btn-lg-square rounded-circle mx-2 bold-text">{{ $jugadora->numero }}</a>
-                                </div>
-                                <div class="d-flex">
-                                    <p class="text-white">{{ $jugadora->posicione->nombre }}</p>
-                                </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card h-100 shadow-sm text-center">
+                            {{-- Imagen --}}
+                            <img src="{{ $jugadora->imagen }}" class="card-img-top" alt="{{ $jugadora->nombre }}">
+
+                            <div class="card-body d-flex flex-column align-items-center">
+                                <h5 class="card-title mb-1">{{ $jugadora->nombre }}</h5>
+
+                                {{-- Dorsal en círculo --}}
+                                @if ($jugadora->numero)
+                                    <div class="dorsal-circle">
+                                        {{ $jugadora->numero }}
+                                    </div>
+                                @endif
+
+                                <p class="text-muted mb-0">{{ $jugadora->posicione->nombre }}</p>
                             </div>
                         </div>
                     </div>
                 @endforeach
 
+                {{-- Staff --}}
                 @foreach ($staffPrimerEquipo as $staff)
-                    <div class="col-lg-3 col-md-6 portfolio-item second wow ">
-                        <div class="portfolio-inner rounded">
-                            <img class="img-fluid" src="{{ $staff->imagen }}" alt="">
-                            <div class="portfolio-text">
-                                <h4 class="text-white mb-4">{{ $staff->nombre }}</h4>
-                                <div class="d-flex">
-                                    <a class="btn btn-lg-square rounded-circle mx-2 bold-text"><i
-                                            class="fa fa-star "></i></a>
-                                </div>
-                                <div class="d-flex">
-                                    <p class="text-white">{{ $staff->role->nombre }}</p>
-                                </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card h-100 shadow-sm text-center">
+                            {{-- Imagen --}}
+                            <img src="{{ $staff->imagen }}" class="card-img-top" alt="{{ $staff->nombre }}">
+
+                            <div class="card-body d-flex flex-column align-items-center">
+                                <h5 class="card-title mb-1">{{ $staff->nombre }}</h5>
+                                <p class="text-muted mb-0">{{ $staff->role->nombre }}</p>
                             </div>
                         </div>
                     </div>
                 @endforeach
-
             </div>
         </div>
     </div>
-    <!-- Projects End -->
+    <!-- Plantilla End -->
 @endsection
