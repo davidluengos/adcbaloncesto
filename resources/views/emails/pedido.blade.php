@@ -1,7 +1,7 @@
 @component('mail::message')
 # Nuevo pedido
 
-Hola {{ $cliente['nombre'] }},
+Hola, {{ $cliente['nombre'] }},
 
 Se ha realizado un nuevo pedido con los siguientes datos:
 
