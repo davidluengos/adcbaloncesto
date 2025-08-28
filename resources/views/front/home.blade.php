@@ -240,7 +240,8 @@
                 @if ($jugadorasPrimerEquipo->count() == 0)
                     <h2>No hay plantilla disponible</h2>
                 @else
-                    <h2 class="display-5 mb-5">{{ $jugadorasPrimerEquipo[0]->equipo->nombre }}</h2>
+                    <h2 class="display-5">{{ $jugadorasPrimerEquipo[0]->equipo->nombre }}</h2>
+                    <p class="text-muted fs-5 fw-bold">{{ $jugadorasPrimerEquipo[0]->equipo->categoria->nombre }}</p>
                 @endif
             </div>
 
