@@ -59,6 +59,15 @@
                                     <textarea name="comentarios" class="form-control" rows="3"></textarea>
                                 </div>
 
+                                <!-- Sección para RGPD -->
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" name="aceptar_politica" id="aceptar_politica" class="form-check-input" required>
+                                    <label class="form-check-label" for="aceptar_politica">
+                                        He leído y acepto la 
+                                        <a href="{{ route('front.privacidad') }}" target="_blank">Política de Privacidad</a>.
+                                    </label>
+                                </div>
+
                                 <button type="submit" class="btn btn-primary w-100">Solicitar pedido</button>
                             </form>
                         </div>

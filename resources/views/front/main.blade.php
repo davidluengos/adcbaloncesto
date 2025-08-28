@@ -91,11 +91,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="/nosotros" class="nav-item nav-link text-primary">El Club</a>
                 <a href="/#partidos" class="nav-item nav-link text-primary">Partidos</a>
                 <a href="/#plantilla" class="nav-item nav-link text-primary">Plantilla</a>
                 {{-- <a href="/clasificacion" class="nav-item nav-link text-primary">Clasificación</a> --}}
                 <a href="/tienda" class="nav-item nav-link text-primary">Tienda</a>
-                <a href="/noticias" class="nav-item nav-link text-primary">Actualidad</a>
+                <a href="/noticias" class="nav-item nav-link text-primary">Noticias</a>
             </div>
             {{-- <a href="" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Contacto<i class="fa fa-arrow-right ms-3"></i></a> --}}
         </div>
@@ -171,6 +172,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Secciones</h4>
+                    <a class="btn btn-link" href="/nosotros">El Club</a>
                     <a class="btn btn-link" href="/#partidos">Partidos</a>
                     <a class="btn btn-link" href="/#plantilla">Plantilla </a>
                     <a class="btn btn-link" href="/noticias">Noticias</a>
@@ -180,6 +182,7 @@
                     <h4 class="text-white mb-4">Enlaces</h4>
                     <a class="btn btn-link" href="/aviso-legal">Aviso Legal</a>
                     <a class="btn btn-link" href="/politica-cookies">Política de Cookies</a>
+                    <a class="btn btn-link" href="/politica-privacidad">Política de Privacidad</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <!-- <div class="row">

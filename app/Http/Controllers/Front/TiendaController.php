@@ -78,6 +78,7 @@ class TiendaController extends Controller
             'telefono' => 'required|string|max:20',
             'comentarios' => 'nullable|string|max:500',
             'socio' => 'required|boolean',
+            'aceptar_politica' => 'accepted', // ✅ obligatorio marcar
         ]);
 
         $cart = Session::get('cart', []);
