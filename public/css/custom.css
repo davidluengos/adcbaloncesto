@@ -171,3 +171,12 @@ a:hover {
 .border-button{
     border: 1px solid #fff;
 }
+
+.portfolio-item {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.portfolio-item.is-visible {
+    opacity: 1;
+}

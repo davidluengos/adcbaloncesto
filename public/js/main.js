@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -24,8 +24,8 @@
             $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
         }
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -35,7 +35,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
 
@@ -47,7 +47,7 @@
     });
 
 
-    // Portfolio isotope and filter
+    /* // Portfolio isotope and filter
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
@@ -56,8 +56,41 @@
         $("#portfolio-flters li").removeClass('active');
         $(this).addClass('active');
 
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
+        portfolioIsotope.isotope({ filter: $(this).data('filter') });
+    }); */
+
+    // Portfolio isotope and filter
+    var $portfolio = $('.portfolio-container');
+
+    var portfolioIsotope = $portfolio.isotope({
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows',
+        transitionDuration: '0.6s' // 🔥 animación al recolocar
     });
+
+    $('#portfolio-flters li').on('click', function () {
+        $("#portfolio-flters li").removeClass('active');
+        $(this).addClass('active');
+        portfolioIsotope.isotope({ filter: $(this).data('filter') });
+    });
+
+    // 🔧 Fade-in de cada item al cargar su imagen
+    $portfolio.find('img').each(function () {
+        var $img = $(this);
+        var $item = $img.closest('.portfolio-item');
+
+        function showItem() {
+            $item.addClass('is-visible'); // activa el fade-in por CSS
+            portfolioIsotope.isotope('layout'); // reacomoda suavemente
+        }
+
+        if (this.complete) {
+            showItem(); // ya cargada (cache)
+        } else {
+            $img.on('load', showItem);
+        }
+    });
+
 
 
     // Testimonials carousel
@@ -68,12 +101,12 @@
         dots: false,
         loop: true,
         nav: true,
-        navText : [
+        navText: [
             '<i class="bi bi-chevron-left"></i>',
             '<i class="bi bi-chevron-right"></i>'
         ]
     });
 
-    
+
 })(jQuery);
 
