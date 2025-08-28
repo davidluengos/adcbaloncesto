@@ -70,7 +70,12 @@
                     <div class="h-100 d-inline-flex align-items-center mx-n2" style="padding-left: 20px;">
                         <a class="btn btn-light" href="{{ route('tienda.cart') }}">
                             <i class="fas fa-shopping-cart"></i>
-                            {{ count(session('cart')) }} productos
+                            {{-- si tiene un producto, en singular --}}
+                            @if (count(session('cart')) === 1)
+                                {{ count(session('cart')) }} producto
+                            @else
+                                {{ count(session('cart')) }} productos
+                            @endif
                         </a>
                     </div>
                 @endif
