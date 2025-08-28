@@ -3,7 +3,11 @@
         
         <div class="form-group">
             {{ Form::label('fecha') }}
-            {{ Form::text('fecha', $noticia->fecha, ['class' => 'form-control' . ($errors->has('fecha') ? ' is-invalid' : ''), 'placeholder' => 'Fecha']) }}
+            {{-- {{ Form::text('fecha', $noticia->fecha, ['class' => 'form-control' . ($errors->has('fecha') ? ' is-invalid' : ''), 'placeholder' => 'Fecha']) }} --}}
+            {{ Form::datetimeLocal('fecha', $noticia->fecha ? \Carbon\Carbon::parse($noticia->fecha)->format('Y-m-d\TH:i') : null, [
+                'class' => 'form-control' . ($errors->has('fecha') ? ' is-invalid' : ''),
+                'placeholder' => 'Fecha y hora'
+            ]) }}
             {!! $errors->first('fecha', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
