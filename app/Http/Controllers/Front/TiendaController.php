@@ -87,6 +87,7 @@ class TiendaController extends Controller
 
         // Enviar correo al administrador
         Mail::to('pedidos@adcbaloncesto.es')->send(new PedidoMail($data, $cart));
+        Mail::to('pedidosadcalqazeres@gmail.com')->send(new PedidoMail($data, $cart));
 
         // Enviar copia al cliente
         Mail::to($data['email'])->send(new PedidoMail($data, $cart));
