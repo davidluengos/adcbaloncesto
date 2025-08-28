@@ -180,3 +180,7 @@ a:hover {
 .portfolio-item.is-visible {
     opacity: 1;
 }
+
+.ck-editor__editable_inline {
+    min-height: 150px;
+}
