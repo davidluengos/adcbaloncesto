@@ -24,7 +24,16 @@
 
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">{{ $producto->nombre }}</h5>
-                                    <p class="card-text text-muted">{{ Str::limit($producto->descripcion, 80) }}</p>
+                                    {{-- <p class="card-text text-muted">{{ Str::limit($producto->descripcion, 80) }}</p> --}}
+                                    @if ($producto->descripcion && str_contains($producto->descripcion, '[OFERTA]'))
+                                        @php
+                                            // Extraemos el texto después de la etiqueta
+                                            $textoOferta = str_replace('[OFERTA]', '', $producto->descripcion);
+                                        @endphp
+                                        <div class="alert alert-warning p-2 text-center mb-2" role="alert">
+                                            {{ trim($textoOferta) }}
+                                        </div>
+                                    @endif
                                     <h6 class="text-primary mb-3">{{ number_format($producto->precio, 2) }} €</h6>
                                     <a href="{{ route('tienda.show', $producto->id) }}"
                                         class="btn btn-outline-primary mt-auto">Ver producto</a>

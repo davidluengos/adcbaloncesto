@@ -17,7 +17,16 @@
                     </div>
                     <div class="col-md-6">
                         <h1>{{ $producto->nombre }}</h1>
-                        <p class="text-muted">{{ $producto->descripcion }}</p>
+                        {{-- <p class="text-muted">{{ $producto->descripcion }}</p> --}}
+                        @if ($producto->descripcion && str_contains($producto->descripcion, '[OFERTA]'))
+                            @php
+                                // Extraemos el texto después de la etiqueta
+                                $textoOferta = str_replace('[OFERTA]', '', $producto->descripcion);
+                            @endphp
+                            <div class="alert alert-warning p-2 text-center mb-2" role="alert">
+                                {{ trim($textoOferta) }}
+                            </div>
+                        @endif
                         <h3 class="text-primary">{{ number_format($producto->precio, 2) }} €</h3>
 
                         <form action="{{ route('tienda.addToCart', $producto->id) }}" method="POST" class="mt-3">
@@ -40,7 +49,8 @@
                             {{-- input de cantidad --}}
                             <div class="mb-3">
                                 <label for="cantidad" class="form-label">Cantidad:</label>
-                                <input type="number" name="cantidad" class="form-control" value="1" min="1" required>
+                                <input type="number" name="cantidad" class="form-control" value="1" min="1"
+                                    required>
                             </div>
                             <button type="submit" class="btn btn-success">🛒 Añadir al carrito</button>
                         </form>
