@@ -50,7 +50,13 @@
                                             
 											<td>{{ $patrocinadore->nombre }}</td>
 											<td>{{ $patrocinadore->patrocinadorTipo->nombre }}</td>
-											<td>{{ $patrocinadore->imagen }}</td>
+											<td>
+                                                @if ($patrocinadore->imagen)
+                                                    <img src="{{ asset($patrocinadore->imagen) }}" alt="{{ $patrocinadore->nombre }}" class="img-fluid" style="max-width: 100px;">
+                                                @else
+                                                    <span class="text-muted">Sin imagen</span>
+                                                @endif
+                                            </td>
 
                                             <td>
                                                 <form action="{{ route('patrocinadores.destroy',$patrocinadore->id) }}" method="POST">

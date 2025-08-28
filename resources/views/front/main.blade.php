@@ -137,22 +137,28 @@
         </div>
         <div class="row">
             @foreach ($patrocinadoresPrincipales as $patrocinador)
-                <img class="patrocinadoresPrincipales" data-wow-delay="0.1s" src="{{ $patrocinador->imagen }}"
-                    alt="{{ $patrocinador->nombre }}">
+                <a href="{{ $patrocinador->url }}" target="_blank">
+                    <img class="patrocinadoresPrincipales" data-wow-delay="0.1s" src="{{ $patrocinador->imagen }}"
+                        alt="{{ $patrocinador->nombre }}">
+                </a>
             @endforeach
         </div>
         <hr>
         <div class="row">
             @foreach ($patrocinadoresInstitucionales as $patrocinador)
-                <img class="patrocinadoresInstitucionales" data-wow-delay="0.1s" src="{{ $patrocinador->imagen }}"
-                    alt="{{ $patrocinador->nombre }}">
+                <a href="{{ $patrocinador->url }}" target="_blank">
+                    <img class="patrocinadoresInstitucionales" data-wow-delay="0.1s" src="{{ $patrocinador->imagen }}"
+                        alt="{{ $patrocinador->nombre }}">
+                </a>
             @endforeach
         </div>
         <hr>
         <div class="row">
             @foreach ($patrocinadoresNormales as $patrocinador)
-                <img class="patrocinadoresNormales" data-wow-delay="0.1s" src="{{ $patrocinador->imagen }}"
-                    alt="{{ $patrocinador->nombre }}">
+                <a href="{{ $patrocinador->url }}" target="_blank">
+                    <img class="patrocinadoresNormales" data-wow-delay="0.1s" src="{{ $patrocinador->imagen }}"
+                        alt="{{ $patrocinador->nombre }}">
+                </a>
             @endforeach
         </div>
     </div>

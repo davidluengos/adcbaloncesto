@@ -16,6 +16,12 @@
             {{ Form::file('imagen', ['class' => 'form-control' . ($errors->has('imagen') ? ' is-invalid' : ''), 'placeholder' => 'Imagen']) }}
             {!! $errors->first('imagen', '<div class="invalid-feedback">:message</div>') !!}
         </div>
+        {{-- Form-group para url --}}
+        <div class="form-group">
+            {{ Form::label('url') }}
+            {{ Form::text('url', $patrocinadore->url, ['class' => 'form-control' . ($errors->has('url') ? ' is-invalid' : ''), 'placeholder' => 'URL']) }}
+            {!! $errors->first('url', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
 
     </div>
     <div class="box-footer mt20">

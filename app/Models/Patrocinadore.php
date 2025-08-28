@@ -32,7 +32,7 @@ class Patrocinadore extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombre','tipo_patrocinador_id','imagen'];
+    protected $fillable = ['nombre','tipo_patrocinador_id','imagen', 'url'];
 
 
     /**
