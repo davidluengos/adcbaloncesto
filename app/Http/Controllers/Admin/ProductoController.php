@@ -29,12 +29,14 @@ class ProductoController extends Controller
             'precio' => 'required|numeric|min:0',
             'imagen' => 'nullable|image|max:3048',
             'imagen2' => 'nullable|image|max:2048',
+            'precio_original' => 'nullable|numeric|min:0',
         ]);
 
         $producto = new Producto($data);
         $producto->disponible = $request->has('disponible');
         $producto->agotado = $request->has('agotado');
         $producto->tiene_tallas = $request->has('tiene_tallas');
+        $producto->prioritario = $request->has('prioritario');
         $producto->save();
 
         if ($request->hasFile('imagen')) {
@@ -78,12 +80,14 @@ class ProductoController extends Controller
             'precio' => 'required|numeric|min:0',
             'imagen' => 'nullable|image|max:2048',
             'imagen2' => 'nullable|image|max:2048',
+            'precio_original' => 'nullable|numeric|min:0',
         ]);
 
         $producto->fill($data);
         $producto->disponible = $request->has('disponible');
         $producto->agotado = $request->has('agotado');
         $producto->tiene_tallas = $request->has('tiene_tallas');
+        $producto->prioritario = $request->has('prioritario');
 
         if ($request->hasFile('imagen')) {
             $file = $request->file('imagen');

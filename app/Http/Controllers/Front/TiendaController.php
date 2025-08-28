@@ -18,6 +18,8 @@ class TiendaController extends Controller
     {
         $title = "Tienda";
         $productos = Producto::where('disponible', true)
+            ->orderByDesc('prioritario') // primero los prioritarios
+            ->orderBy('id', 'asc')       // dentro de cada grupo, por id ascendente
             ->get();
 
         return view('front.tienda.index', compact('productos', 'title'));

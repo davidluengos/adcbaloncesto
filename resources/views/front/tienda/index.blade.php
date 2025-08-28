@@ -27,28 +27,13 @@
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">{{ $producto->nombre }}</h5>
 
-                                    @php
-                                        $esOferta = false;
-                                        $precioOriginal = null;
-
-                                        if (
-                                            $producto->descripcion &&
-                                            str_contains($producto->descripcion, '[OFERTA]')
-                                        ) {
-                                            $esOferta = true;
-                                            // Extraer el precio original después de [OFERTA]
-                                            $precioOriginal = trim(str_replace('[OFERTA]', '', $producto->descripcion));
-                                        }
-                                    @endphp
-
                                     {{-- Precio o alerta de oferta --}}
-                                    @if ($esOferta)
+                                    @if ($producto->precio_original)
                                         <div class="alert alert-danger p-2 text-center mb-2 fw-bold fs-5">
                                             ¡OFERTA! {{ number_format($producto->precio, 2) }} €
-                                            @if ($precioOriginal)
-                                                <span
-                                                    class="text-decoration-line-through text-secondary ms-2">{{ $precioOriginal }}</span>
-                                            @endif
+                                            <span class="text-decoration-line-through text-secondary ms-2">
+                                                {{ number_format($producto->precio_original, 2) }} €
+                                            </span>
                                         </div>
                                     @else
                                         <h6 class="text-primary mb-3 fs-5">{{ number_format($producto->precio, 2) }} €</h6>
@@ -60,6 +45,7 @@
                                         Ver producto
                                     </a>
                                 </div>
+
                             </div>
                         </div>
                     @endforeach

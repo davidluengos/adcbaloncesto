@@ -18,31 +18,20 @@
                     <div class="col-md-6">
                         <h1>{{ $producto->nombre }}</h1>
                         {{-- <p class="text-muted">{{ $producto->descripcion }}</p> --}}
-                        @php
-                            $esOferta = false;
-                            $precioOriginal = null;
-
-                            if ($producto->descripcion && str_contains($producto->descripcion, '[OFERTA]')) {
-                                $esOferta = true;
-                                // Extraer el precio original después de [OFERTA]
-                                $precioOriginal = trim(str_replace('[OFERTA]', '', $producto->descripcion));
-                            }
-                        @endphp
 
                         {{-- Precio o alerta de oferta --}}
-                        @if ($esOferta)
+                        @if ($producto->precio_original)
                             <div class="alert alert-danger p-2 text-center mb-2 fw-bold fs-4">
                                 ¡OFERTA! {{ number_format($producto->precio, 2) }} €
-                                @if ($precioOriginal)
-                                    <span
-                                        class="text-decoration-line-through text-secondary ms-2">{{ $precioOriginal }}</span>
-                                @endif
+                                <span class="text-decoration-line-through text-secondary ms-2">
+                                    {{ number_format($producto->precio_original, 2) }} €
+                                </span>
                             </div>
                         @else
                             <h3 class="text-primary">{{ number_format($producto->precio, 2) }} €</h3>
                         @endif
 
-
+                        {{-- Formulario para añadir al carrito --}}
                         <form action="{{ route('tienda.addToCart', $producto->id) }}" method="POST" class="mt-3">
                             @csrf
                             @if ($producto->tiene_tallas)

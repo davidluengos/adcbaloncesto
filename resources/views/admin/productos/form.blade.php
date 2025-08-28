@@ -18,6 +18,18 @@
             {{ Form::number('precio', $producto->precio, ['class' => 'form-control' . ($errors->has('precio') ? ' is-invalid' : ''), 'placeholder' => 'Precio']) }}
             {!! $errors->first('precio', '<div class="invalid-feedback">:message</div>') !!}
         </div>
+        {{-- Form Group for Precio Original --}}
+        <div class="form-group">
+            {{ Form::label('precio_original') }} (Si se rellena, es oferta)
+            {{ Form::number('precio_original', $producto->precio_original, ['class' => 'form-control' . ($errors->has('precio_original') ? ' is-invalid' : ''), 'placeholder' => 'Precio Original']) }}
+            {!! $errors->first('precio_original', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        {{-- Form Group for Prioritario --}}
+        <div class="form-group form-check">
+            {{ Form::checkbox('prioritario', 1, $producto->prioritario, ['class' => 'form-check-input', 'id' => 'prioritario']) }}
+            {{ Form::label('prioritario', 'Prioritario', ['class' => 'form-check-label']) }}
+            {!! $errors->first('prioritario', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
         {{-- Form Group for Disponible --}}
         <div class="form-group form-check">
             {{ Form::checkbox('disponible', 1, $producto->disponible, ['class' => 'form-check-input', 'id' => 'disponible']) }}

@@ -38,6 +38,8 @@
                                         <th>ID</th>
                                         <th>Nombre</th>
                                         <th>Precio</th>
+                                        <th>Precio Original</th> {{-- Ponemos un taggle indicando que si se rellena, es oferta --}}
+                                        <th>Prioritario</th>
                                         <th>Disponible</th>
                                         <th>Agotado</th>
                                         <th>Tiene tallas</th>
@@ -52,6 +54,8 @@
                                             <td>{{ $producto->id }}</td>
                                             <td>{{ $producto->nombre }}</td>
                                             <td>{{ number_format($producto->precio, 2) }} €</td>
+                                            <td>{{ $producto->precio_original ? number_format($producto->precio_original, 2) . ' €' : '-' }}</td>
+                                            <td>{{ $producto->prioritario ? '✅' : '❌' }}</td>
                                             <td>{{ $producto->disponible ? '✅' : '❌' }}</td>
                                             <td>{{ $producto->agotado ? '✅' : '❌' }}</td>
                                             <td>{{ $producto->tiene_tallas ? '✅' : '❌' }}</td>
