@@ -34,6 +34,8 @@
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/custom.css" rel="stylesheet">
 
+    <!-- Google Analytics -->
+    <x-analytics /> {{-- Aquí se carga el componente creado para Google Analytics --}}
 </head>
 
 <body>
