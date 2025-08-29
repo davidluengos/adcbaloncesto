@@ -71,7 +71,7 @@ class Clasificacion
         return $resultados;
     }
 
-    public function obtener_clasificacion_primera_masculino(){
+    public static function obtener_clasificacion_primera_masculino(){
         return null;
     }
 

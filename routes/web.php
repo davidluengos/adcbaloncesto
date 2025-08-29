@@ -1,9 +1,8 @@
 <?php
 
-use App\Http\Controllers\Front\AvisoLegalController;
 use App\Http\Controllers\Front\CanteraController;
 use App\Http\Controllers\Front\ClasificacionController;
-use App\Http\Controllers\Front\CookiesController;
+use App\Http\Controllers\Front\ContactoController;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\NoticiaController;
 use App\Http\Controllers\Front\NoticiasController;
@@ -53,3 +52,6 @@ Route::get('/checkout', [TiendaController::class, 'checkout'])->name('tienda.che
 Route::post('/checkout', [TiendaController::class, 'processOrder'])->name('tienda.processOrder');
 Route::delete('/carrito/{id}', [TiendaController::class, 'removeFromCart'])->name('tienda.removeFromCart');
 Route::delete('/carrito', [TiendaController::class, 'clearCart'])->name('tienda.clearCart');
+
+Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto.index');
+Route::post('/contacto', [ContactoController::class, 'send'])->name('contacto.send')->middleware('throttle:5,10'); // máximo 5 envíos cada 10 minutos por IP

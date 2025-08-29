@@ -104,6 +104,7 @@
                 {{-- <a href="/clasificacion" class="nav-item nav-link text-primary">Clasificación</a> --}}
                 <a href="/tienda" class="nav-item nav-link text-primary">Tienda</a>
                 <a href="/noticias" class="nav-item nav-link text-primary">Noticias</a>
+                <a href="/contacto" class="nav-item nav-link text-primary">Contacto</a>
             </div>
             {{-- <a href="" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Contacto<i class="fa fa-arrow-right ms-3"></i></a> --}}
         </div>
@@ -205,6 +206,7 @@
                     <a class="btn btn-link" href="/#plantilla">Plantilla </a>
                     <a class="btn btn-link" href="/noticias">Noticias</a>
                     <a class="btn btn-link" href="/tienda">Tienda</a>
+                    <a class="btn btn-link" href="/contacto">Contacto</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Enlaces</h4>
