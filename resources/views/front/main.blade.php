@@ -135,34 +135,48 @@
             <p class="fs-5 fw-bold text-primary">Patrocinadores y Colaboradores</p>
             <h2>¡Gracias por vuestro apoyo!</h2>
         </div>
-        <div class="row">
+
+        <!-- Patrocinadores Principales -->
+        <div class="row justify-content-center">
             @foreach ($patrocinadoresPrincipales as $patrocinador)
-                <a href="{{ $patrocinador->url }}" target="_blank">
-                    <img class="patrocinadoresPrincipales" data-wow-delay="0.1s" src="{{ $patrocinador->imagen }}"
-                        alt="{{ $patrocinador->nombre }}">
-                </a>
+                <div class="col-auto text-center mb-3">
+                    <a href="{{ $patrocinador->url }}" target="_blank">
+                        <img class="patrocinadoresPrincipales" data-wow-delay="0.1s" src="{{ $patrocinador->imagen }}"
+                            alt="{{ $patrocinador->nombre }}">
+                    </a>
+                </div>
             @endforeach
         </div>
         <hr>
-        <div class="row">
+
+        <!-- Patrocinadores Institucionales -->
+        <div class="row justify-content-center">
             @foreach ($patrocinadoresInstitucionales as $patrocinador)
-                <a href="{{ $patrocinador->url }}" target="_blank">
-                    <img class="patrocinadoresInstitucionales" data-wow-delay="0.1s" src="{{ $patrocinador->imagen }}"
-                        alt="{{ $patrocinador->nombre }}">
-                </a>
+                <div class="col-auto text-center mb-3">
+                    <a href="{{ $patrocinador->url }}" target="_blank">
+                        <img class="patrocinadoresInstitucionales" data-wow-delay="0.1s"
+                            src="{{ $patrocinador->imagen }}" alt="{{ $patrocinador->nombre }}">
+                    </a>
+                </div>
             @endforeach
         </div>
         <hr>
-        <div class="row">
+
+        <!-- Patrocinadores Normales -->
+        <div class="row justify-content-center">
             @foreach ($patrocinadoresNormales as $patrocinador)
-                <a href="{{ $patrocinador->url }}" target="_blank">
-                    <img class="patrocinadoresNormales" data-wow-delay="0.1s" src="{{ $patrocinador->imagen }}"
-                        alt="{{ $patrocinador->nombre }}">
-                </a>
+                <div class="col-auto text-center mb-3">
+                    <a href="{{ $patrocinador->url }}" target="_blank">
+                        <img class="patrocinadoresNormales" data-wow-delay="0.1s" src="{{ $patrocinador->imagen }}"
+                            alt="{{ $patrocinador->nombre }}">
+                    </a>
+                </div>
             @endforeach
         </div>
     </div>
     <!-- Patrocinadores End-->
+
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
@@ -178,7 +192,8 @@
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank"
                             href="https://twitter.com/adcbaloncesto"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank"
-                            href="https://www.instagram.com/adcbaloncestocaceres/"><i class="fab fa-instagram"></i></a>
+                            href="https://www.instagram.com/adcbaloncestocaceres/"><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
