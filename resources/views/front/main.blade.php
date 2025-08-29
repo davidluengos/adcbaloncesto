@@ -19,7 +19,7 @@
         rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -61,8 +61,8 @@
                     <span>Síguenos:</span>
                     <a class="btn btn-link text-light" target="_blank" href="https://www.facebook.com/adcbaloncesto"><i
                             class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" target="_blank" href="https://twitter.com/adcbaloncesto"><i
-                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-link text-light" target="_blank" href="https://x.com/adcbaloncesto"><i
+                            class="fab fa-x-twitter"></i></a>
                     <a class="btn btn-link text-light" target="_blank"
                         href="https://www.instagram.com/adcbaloncestocaceres/"><i class="fab fa-instagram"></i></a>
                 </div>
@@ -192,7 +192,7 @@
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank"
                             href="https://www.facebook.com/adcbaloncesto"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank"
-                            href="https://twitter.com/adcbaloncesto"><i class="fab fa-twitter"></i></a>
+                            href="https://x.com/adcbaloncesto"><i class="fab fa-x-twitter"></i></a>
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank"
                             href="https://www.instagram.com/adcbaloncestocaceres/"><i
                                 class="fab fa-instagram"></i></a>
