@@ -70,4 +70,9 @@ class Clasificacion
         // Devolver los resultados en formato JSON
         return $resultados;
     }
+
+    public function obtener_clasificacion_primera_masculino(){
+        return null;
+    }
+
 }
