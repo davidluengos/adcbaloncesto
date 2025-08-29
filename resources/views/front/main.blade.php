@@ -276,6 +276,8 @@
     <!-- Template Javascript -->
     <script src="/js/main.js"></script>
 
+    {!! NoCaptcha::renderJs() !!}
+
     @include('front.cookie-banner')
 
 </body>

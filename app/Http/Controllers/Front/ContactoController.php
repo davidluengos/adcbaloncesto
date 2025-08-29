@@ -28,6 +28,7 @@ class ContactoController extends Controller
             'message' => 'required|string',
             'telefono' => 'nullable|string|max:20',
             'asunto' => 'required|string|max:255',
+            'g-recaptcha-response' => 'required|captcha',
         ]);
 
         Mail::to('pedidos@adcbaloncesto.es')->send(new ContactoMail($data));

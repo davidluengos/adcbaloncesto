@@ -251,3 +251,15 @@ a:hover {
 .btn-whatsapp svg {
     margin-right: 0.5rem;
 }
+
+.grecaptcha-badge {
+    bottom: 10px !important;
+    right: auto !important;
+    left: 10px !important;
+    transform: scale(0.8);
+    transform-origin: 0 0;
+}
+
+.mb-2 {
+    margin-bottom: 2rem !important;
+}

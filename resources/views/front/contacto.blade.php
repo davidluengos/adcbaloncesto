@@ -22,7 +22,7 @@
                                     </div>
                                 @endif
 
-                                <form action="{{ route('contacto.send') }}" method="POST">
+                                <form id="enviar-mensaje" action="{{ route('contacto.send') }}" method="POST">
                                     @csrf
                                     <div class="mb-3">
                                         <label class="form-label">Nombre completo</label>
@@ -84,7 +84,13 @@
                                     {{-- Campo oculto para evitar spam, que los bots suelen completar --}}
                                     <input type="text" name="website" style="display:none">
 
-                                    <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
+                                    {{-- Campo para el reCAPTCHA, que ya incluye el botón de envío --}}
+                                    <div class="mb-3">
+                                        {!! NoCaptcha::displaySubmit('enviar-mensaje', 'Enviar mensaje', ['class' => 'btn btn-primary w-100 mb-2']) !!}
+                                        @error('g-recaptcha-response')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -101,7 +107,8 @@
                                     </li>
                                     <li class="list-group-item">
                                         <strong>Colaboraciones / Patrocinadores:</strong>
-                                        <a href="mailto:colaboracionesadcalqazeres@gmail.com">colaboracionesadcalqazeres@gmail.com</a>
+                                        <a
+                                            href="mailto:colaboracionesadcalqazeres@gmail.com">colaboracionesadcalqazeres@gmail.com</a>
                                     </li>
                                     <li class="list-group-item">
                                         <strong>Pedidos de la tienda:</strong>
