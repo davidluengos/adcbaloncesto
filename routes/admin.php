@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\PatrocinadorTipoController;
 use App\Http\Controllers\Admin\PedidoController;
 use App\Http\Controllers\Admin\PosicioneController;
 use App\Http\Controllers\Admin\ProductoController;
+use App\Http\Controllers\Admin\ResultadosLogController;
 use App\Http\Controllers\Admin\RoleController;
 use Illuminate\Support\Facades\Route;
 
@@ -145,3 +146,6 @@ Route::delete('/productos/{producto}/delete', [ProductoController::class, 'destr
 
 //Pedidos
 Route::get('/pedidos', [PedidoController::class, 'index'])->middleware('auth')->name('pedidos.index');
+
+//Log de Resultados
+Route::get('/resultados-logs', [ResultadosLogController::class, 'index'])->middleware('auth')->name('resultados-logs');
