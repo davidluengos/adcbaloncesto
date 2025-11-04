@@ -33,8 +33,9 @@
                         </thead>
                         <tbody>
                             @foreach ($clasificacion as $item)
-                                @if ($item['EQUIPO'] == 'ALTER ENERSUN AL-QÁZERES EXT.')
-                                    <tr class="table-light">
+                                {{-- Resaltar la fila del equipo ADC --}}
+                                @if (strpos($item['EQUIPO'], 'ADC BALONCESTO') !== false)
+                                    <tr class="table-info">
                                     @else
                                     <tr>
                                 @endif

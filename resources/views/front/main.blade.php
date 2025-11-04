@@ -101,7 +101,7 @@
                 <a href="/nosotros" class="nav-item nav-link text-primary">El Club</a>
                 <a href="/#partidos" class="nav-item nav-link text-primary">Partidos</a>
                 <a href="/#plantilla" class="nav-item nav-link text-primary">Plantilla</a>
-                {{-- <a href="/clasificacion" class="nav-item nav-link text-primary">Clasificación</a> --}}
+                <a href="/clasificacion" class="nav-item nav-link text-primary">Clasificación</a>
                 <a href="/tienda" class="nav-item nav-link text-primary">Tienda</a>
                 <a href="/noticias" class="nav-item nav-link text-primary">Noticias</a>
                 <a href="/contacto" class="nav-item nav-link text-primary">Contacto</a>
@@ -204,6 +204,7 @@
                     <a class="btn btn-link" href="/nosotros">El Club</a>
                     <a class="btn btn-link" href="/#partidos">Partidos</a>
                     <a class="btn btn-link" href="/#plantilla">Plantilla </a>
+                    <a class="btn btn-link" href="/clasificacion">Clasificación</a>
                     <a class="btn btn-link" href="/noticias">Noticias</a>
                     <a class="btn btn-link" href="/tienda">Tienda</a>
                     <a class="btn btn-link" href="/contacto">Contacto</a>

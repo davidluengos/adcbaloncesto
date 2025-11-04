@@ -1,13 +1,15 @@
-<?php 
+<?php
 
 namespace App\Helpers;
 
 use DOMDocument;
+use DOMXPath;
 
 class Clasificacion
 {
 
-    public static function obtener_clasificacion() {
+    public static function obtener_clasificacion()
+    {
         // URL de la página a scrapear
         $url = 'https://www.feb.es/Pasarela/Controles/clasificacion.aspx?g=67';
 
@@ -33,7 +35,7 @@ class Clasificacion
 
                 // Recorrer las celdas de la fila
                 foreach ($fila->getElementsByTagName('td') as $indice => $celda) {
-            // Añadir el contenido de la celda al array de datos del equipo
+                    // Añadir el contenido de la celda al array de datos del equipo
                     switch ($indice) {
                         case 0:
                             $equipo['posicion'] = trim($celda->nodeValue);
@@ -71,8 +73,62 @@ class Clasificacion
         return $resultados;
     }
 
-    public static function obtener_clasificacion_primera_masculino(){
-        return null;
-    }
+    public static function obtener_clasificacion_primera_masculino()
+    {
+        $url = 'https://www.fexb.es/competicion-82/comp-nacionales.aspx';
+        $html = file_get_contents($url);
 
+        $dom = new DOMDocument();
+        @$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
+
+        $xpath = new DOMXPath($dom);
+        $filas = $xpath->query('//div[@id="ctl00_ctl00_contenedor_informacion_contenedor_informacion_con_lateral_PClasificacion"]//table/tbody/tr');
+
+        $resultados = [];
+
+        foreach ($filas as $fila) {
+            $equipo = [];
+            $celdas = $fila->getElementsByTagName('td');
+
+            foreach ($celdas as $indice => $celda) {
+                $raw = $celda->nodeValue;
+                if (preg_match('/"([^"]+)"/', $raw, $matches)) {
+                    $valor = html_entity_decode($matches[1], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+                } else {
+                    $valor = trim($raw);
+                }
+
+                switch ($indice) {
+                    case 0:
+                        $equipo['posicion'] = $valor;
+                        break;
+                    case 1:
+                        $equipo['EQUIPO'] = $valor;
+                        break;
+                    case 2:
+                        $equipo['PJ'] = $valor;
+                        break;
+                    case 3:
+                        $equipo['PG'] = $valor;
+                        break;
+                    case 4:
+                        $equipo['PP'] = $valor;
+                        break;
+                    case 5:
+                        $equipo['PF'] = $valor;
+                        break;
+                    case 6:
+                        $equipo['PC'] = $valor;
+                        break;
+                    case 7:
+                        $equipo['PTS'] = $valor;
+                        break;
+                }
+            }
+
+            if ($equipo) $resultados[] = $equipo;
+        }
+
+        return $resultados;
+    }
 }
