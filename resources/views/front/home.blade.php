@@ -116,7 +116,7 @@
                                     <img src="{{ $item->equipoLocal->imagen }}"
                                         alt="Escudo {{ $item->equipoLocal->nombre }}" width="40" height="40"
                                         loading="lazy" class="img-fluid">
-                                    <span class="fw-medium text-truncate">{{ $item->equipoLocal->nombre }}</span>
+                                    <span class="fw-medium small text-wrap">{{ $item->equipoLocal->nombre }}</span>
                                 </div>
 
                                 <!-- Marcador (columna centro, SIEMPRE centrado) -->
@@ -127,7 +127,7 @@
                                 <!-- Visitante (columna derecha) -->
                                 <div class="col-4 d-flex align-items-center justify-content-end gap-2">
                                     <span
-                                        class="fw-medium text-truncate text-end">{{ $item->equipoVisitante->nombre }}</span>
+                                        class="fw-medium small text-wrap">{{ $item->equipoVisitante->nombre }}</span>
                                     <img src="{{ $item->equipoVisitante->imagen }}"
                                         alt="Escudo {{ $item->equipoVisitante->nombre }}" width="40" height="40"
                                         loading="lazy" class="img-fluid">
