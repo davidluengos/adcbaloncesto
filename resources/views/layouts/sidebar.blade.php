@@ -71,6 +71,10 @@
             <i class="fas fa-fw fa-shopping-cart "></i>
             <span>Pedidos</span>
         </a>
+        <a class="nav-link" href="{{ route('resultados-logs') }}">
+            <i class="fas fa-fw fa-file-alt "></i>
+            <span>Log de Resultados</span>
+        </a>
     </li>
 
 
